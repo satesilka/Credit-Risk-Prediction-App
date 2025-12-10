@@ -32,9 +32,9 @@ input_df = pd.DataFrame({
     "Sex": [encoders["Sex"].transform([sex])[0]],
     "Job": [int(job)],
     "Housing": [encoders["Housing"].transform([housing])[0]],
-    "Saving accounts": [encoders["Saving_accounts"].transform([saving_accounts])[0]], # <-- Column name has SPACE
-    "Checking account": [encoders["Checking_account"].transform([checking_account])[0]], # <-- Column name has SPACE
-    "Credit amount": [credit_amount],
+    "Saving accounts": [encoders["Saving_accounts"].transform([saving_accounts])[0]], 
+    "Checking account": [encoders["Checking_account"].transform([checking_account])[0]], 
+    "Credit amount_log": [np.log1p(credit_amount)],
     "Duration": [duration]
 })
 
